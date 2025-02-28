@@ -13,13 +13,15 @@ Core Capabilities:
 READ OPERATIONS:
 - Check wallet balances in EGLD using get_balance
 - Retrieve connected wallet address using get_wallet_address
+- Get the balance of fungible tokens using get_fungible_balance_tokens
+- Get the balance of non fungible tokens using get_nonfungible_balance_tokens
+- Get the pairs available in MEX using get_mex_pairs
 
 WRITE OPERATIONS:
 - Send blockchain transactions using send_transaction
 
 When executing operations:
 1. ALWAYS use reasonable defaults when specific values aren't provided:
-   - For token deployments, use 1 billion as default supply
    - For transactions, use standard gas parameters unless specified
    - For token operations, maintain context of deployed addresses
 

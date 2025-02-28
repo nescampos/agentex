@@ -47,7 +47,7 @@ async function sendTransaction({
     const myAddress = walletClient.getAddress();
     const MultiversXprovider = await createMultiversXClient();
     const walletOnNetwork = await MultiversXprovider.getAccount(myAddress);
-    const factoryConfig = new TransactionsFactoryConfig({ chainID: "T" });
+    const factoryConfig = new TransactionsFactoryConfig({ chainID: process.env.CHAIN_ID });
     const factory = new TransferTransactionsFactory({ config: factoryConfig });
     const receiver = new Address(to);
     
